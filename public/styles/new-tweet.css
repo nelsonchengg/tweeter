@@ -1,5 +1,10 @@
-.prompt{
+.new-tweet {
+  width: 80%
+}
+
+.prompt {
   font-size: smaller;
+  margin-bottom: 2px;
 }
 
 .tweetButton {
@@ -11,13 +16,14 @@
   align-items: center;
 }
 
-.letterCount {
+.counter {
   display: flex;
-  font-size: small;
-  font-family: 'Bungee', cursive;;
+  font-size: medium;
+  font-family: 'Bungee', cursive;
+  color: rgb(83, 82, 82);
 }
 
-.new-tweet textarea{
+.new-tweet textarea {
   display: inline-block;
   background-color: transparent;
   border-top: none;
@@ -25,7 +31,7 @@
   border-left: none;
   width: 100%;
   font-size: small;
-  border-bottom: solid;  
+  border-bottom: solid;
 }
 
 .buttonAndCount {
