@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,19 +44,26 @@
   </nav>
   <header class="header">
     <div>
-        <img src="/images/profile-hex.png"> 
+      <img src="/images/profile-hex.png">
     </div>
     <br>
     <div>
-        <h2>Your Name</h2>
+      <h2>Your Name</h2>
     </div>
-</header>
+  </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <h1>LOREM IPSUM
-    </h1>
-    <p>The classic latin passage that just never gets old, enjoy as much (or as little) lorem ipsum as you can handle with our easy to use filler text generator.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <section class="new-tweet">
+      <h2 class="prompt">What are you humming about?</h2>
+      <form action="/tweets" method="POST">
+        <label class="textbox" for="tweet-text"></label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div class="buttonAndCount">
+          <button class="tweetButton" type="submit">Tweet</button>
+          <output class="letterCount" name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 

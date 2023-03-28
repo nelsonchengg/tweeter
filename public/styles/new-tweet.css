@@ -1,0 +1,34 @@
+.prompt{
+  font-size: smaller;
+}
+
+.tweetButton {
+  display: flex;
+  font-size: small;
+  font-family: 'Bungee', cursive;
+  background-color: #4056A1;
+  color: white;
+  align-items: center;
+}
+
+.letterCount {
+  display: flex;
+  font-size: small;
+  font-family: 'Bungee', cursive;;
+}
+
+.new-tweet textarea{
+  display: inline-block;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+  font-size: small;
+  border-bottom: solid;  
+}
+
+.buttonAndCount {
+  display: flex;
+  justify-content: space-between;
+}

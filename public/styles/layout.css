@@ -28,10 +28,10 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.container {
+main {
   display: flex;
   width: 90%;
-  background-color: #eff63e;
+  background-color:#f7faa2;
   margin: 0 auto;
   align-items: center;
   flex-direction: column;
