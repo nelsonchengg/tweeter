@@ -5,9 +5,12 @@ $(document).ready(function() {
 
   $tweetInput.on('input', () => {
     let tweetLength = $tweetInput.val().length;
-    $counter.text(140 - tweetLength);
-    if (140 - tweetLength < 0) {
+    let count = 140 - tweetLength;
+    $counter.text(count);
+    if (count < 0) {
       $counter.css("color", "red");
+    } else {
+      $counter.css("color", "rgb(82, 82, 82)");
     }
   });
 });
