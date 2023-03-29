@@ -7,6 +7,10 @@
   margin-bottom: 50px;
 }
 
+.tweet-feed:hover {
+  box-shadow: 10px 5px 5px grey;
+}
+
 .handle-info {
   display: flex;
   justify-content: space-between;
@@ -18,7 +22,7 @@
   display: flex;
   border-bottom: solid;
   font-size: large;
-  width: 90% ;
+  width: 90%;
   justify-content: center;
   margin-left: 5%;
   margin-bottom: 0%;
@@ -34,4 +38,16 @@
 
 .icons {
   color: #4056A1;
+}
+
+.fa-solid.fa-flag:hover{
+  color: #8B8000;
+}
+
+.fa-sharp.fa-solid.fa-retweet:hover {
+  color: #8B8000;
+}
+
+.fa-solid.fa-thumbs-up:hover{
+  color: #8B8000;
 }
