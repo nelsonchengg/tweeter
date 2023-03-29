@@ -6,11 +6,11 @@ $(document).ready(function() {
   $tweetInput.on('input', () => {
     let tweetLength = $tweetInput.val().length;
     let count = 140 - tweetLength;
-    $counter.text(count);
     if (count < 0) {
       $counter.css("color", "red");
     } else {
-      $counter.css("color", "rgb(82, 82, 82)");
+      $counter.css("color", "rgb(88, 88, 88)");
     }
+    $counter.text(count);
   });
 });

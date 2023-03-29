@@ -1,0 +1,37 @@
+.tweet-feed {
+  width: 88%;
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-left: solid;
+  margin-bottom: 50px;
+}
+
+.handle-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0.5em 1.5em 0em;
+}
+
+.old-tweet {
+  display: flex;
+  border-bottom: solid;
+  font-size: large;
+  width: 90% ;
+  justify-content: center;
+  margin-left: 5%;
+  margin-bottom: 0%;
+}
+
+.more-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+  margin-bottom: 2%;
+  font-size: medium;
+}
+
+.icons {
+  color: #4056A1;
+}

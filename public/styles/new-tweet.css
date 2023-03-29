@@ -1,4 +1,6 @@
 .new-tweet {
+  padding-top: 50px;
+  padding-bottom: 50px;
   width: 80%
 }
 
@@ -20,7 +22,7 @@
   display: flex;
   font-size: medium;
   font-family: 'Bungee', cursive;
-  color: rgb(82, 82, 82);
+  color: rgb(88, 88, 88);
 }
 
 .new-tweet textarea {
