@@ -3,31 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ];
 
 const safe = function(str) {
   let div = document.createElement("div");
@@ -36,23 +11,22 @@ const safe = function(str) {
 };
 
 const renderTweets = function(data) {
-  data.forEach(userInfo => {
+  for (const userInfo of data) {
     $(".tweets").prepend(createTweetElement(userInfo));
-  });
+  };
 };
 
-const createTweetElement = function(userInfo) {
-  const { user, content, created_at } = userInfo;
-  const time = timeago.format(created_at, "en_US");
+const createTweetElement = function(data) {
+  const time = timeago.format(data.created_at, "en_US");
   return `<article class="tweet">
   <header class="handle-info">
     <div class="avatar-name">
-      <img src=${user.avatars}></img>
-      <div>${user.name}</div>
+      <img src=${data.user.avatars}></img>
+      <div>${data.user.name}</div>
     </div>
-    <div>${user.handle}</div>
+    <div>${data.user.handle}</div>
   </header>
-  <p class="tweet-content">${safe(content.text)}</p>
+  <p class="tweet-content">${safe(data.content.text)}</p>
   <footer class="more-actions">
     <time>${time}</time>
     <div class="icons">
@@ -100,7 +74,7 @@ $(document).ready(function() {
       $(".error-message").text("Tweet is too long!").slideDown();
       return;
     }
-    
+
     if (tweetLength === 0) {
       $(".error-message").text("Type something you clown!").slideDown();
       return;
