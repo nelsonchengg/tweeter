@@ -1,3 +1,13 @@
+.error-message {
+  display: flex;
+  color: red;
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-left: solid;
+  justify-content: center;
+}
+
 .new-tweet {
   padding-top: 50px;
   padding-bottom: 50px;
