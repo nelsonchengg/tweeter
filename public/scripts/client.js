@@ -29,6 +29,12 @@ const data = [
   }
 ];
 
+const safe = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const renderTweets = function(data) {
   data.forEach(userInfo => {
     $(".tweets").prepend(createTweetElement(userInfo));
@@ -46,7 +52,7 @@ const createTweetElement = function(userInfo) {
     </div>
     <div>${user.handle}</div>
   </header>
-  <p class="tweet-content">${content.text}</p>
+  <p class="tweet-content">${safe(content.text)}</p>
   <footer class="more-actions">
     <time>${time}</time>
     <div class="icons">
@@ -61,10 +67,20 @@ const createTweetElement = function(userInfo) {
 const loadTweets = function() {
   $.ajax({
     method: "GET",
-    url: "/tweets",
+    url: "/tweets"
   })
     .then(function(data) {
       renderTweets(data);
+    });
+};
+
+const addingToFeed = function() {
+  $.ajax({
+    method: "GET",
+    url: "/tweets"
+  })
+    .then(function(data) {
+      $(".tweets").prepend(createTweetElement(data[data.length - 1]));
     });
 };
 
@@ -74,13 +90,26 @@ $(document).ready(function() {
   $(".tweet-form").on("submit", function(event) {
     event.preventDefault();
     const input = $("#tweet-text").serialize();
+    const tweetLength = $("#tweet-text").val().length;
+
+    if (tweetLength > 140) {
+      alert("Tweet too long!");
+      return;
+    }
+    if (tweetLength === 0) {
+      alert("No blank tweets!");
+      return;
+    }
+
     $.ajax({
       method: "POST",
       url: "/tweets",
       data: input,
     })
       .then(function() {
-        console.log(input);
+        addingToFeed();
+        $("#tweet-text").val("");
+        $(".counter").val(140);
       });
   });
 });
