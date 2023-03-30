@@ -1,5 +1,8 @@
-.tweet-feed {
-  width: 88%;
+.tweets {
+  width: 90%;
+}
+
+.tweet {
   border-top: solid;
   border-right: solid;
   border-bottom: solid;
@@ -7,7 +10,7 @@
   margin-bottom: 50px;
 }
 
-.tweet-feed:hover {
+.tweet:hover {
   box-shadow: 10px 5px 5px grey;
 }
 
@@ -18,14 +21,19 @@
   padding: 0.5em 1.5em 0em;
 }
 
-.old-tweet {
+.avatar-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.tweet-content {
   display: flex;
   border-bottom: solid;
   font-size: large;
   width: 90%;
   justify-content: center;
   margin-left: 5%;
-  margin-bottom: 0%;
+  margin-bottom: 2%;
 }
 
 .more-actions {
@@ -40,7 +48,7 @@
   color: #4056A1;
 }
 
-.fa-solid.fa-flag:hover{
+.fa-solid.fa-flag:hover {
   color: #8B8000;
 }
 
@@ -48,6 +56,6 @@
   color: #8B8000;
 }
 
-.fa-solid.fa-thumbs-up:hover{
+.fa-solid.fa-thumbs-up:hover {
   color: #8B8000;
 }

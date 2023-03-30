@@ -32,6 +32,7 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -57,7 +58,7 @@
   <main class="container">
     <section class="new-tweet">
       <h2 class="prompt">What are you humming about?</h2>
-      <form action="/tweets" method="POST">
+      <form action="/tweets" method="POST" class="tweet-form">
         <label for="tweet-text"></label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="buttonAndCount">
@@ -66,21 +67,8 @@
         </div>
       </form>
     </section>
-    <article class="tweet-feed">
-      <header class="handle-info">
-        <div>Name</div>
-        <div>Handle</div>
-      </header>
-      <p class="old-tweet">The Matrix and Skynet are inevitable</p>
-      <footer class="more-actions">
-        <div>Date Posted</div>
-        <div class="icons">
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-sharp fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-thumbs-up"></i>
-        </div>
-      </footer>
-    </article>
+    <section class="tweets">
+    </section>
   </main>
 </body>
 
