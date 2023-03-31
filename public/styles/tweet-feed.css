@@ -29,6 +29,7 @@
 .tweet-content {
   display: flex;
   border-bottom: solid;
+  word-break: break-all;
   font-size: large;
   width: 90%;
   justify-content: center;
