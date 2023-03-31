@@ -1,12 +1,12 @@
 .navigation {
   display: flex;
-  position: fixed;
   width: 100%;
-  height: 120px;
+  height: 144px;
   color: #FFFFFF;
   padding: 0 1.5em;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .project-name {
@@ -27,15 +27,17 @@ i.fa-angles-down {
   color: red;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 320px) {
   .navigation {
-    background-color: transparent;
+    background-color: gold;
+    background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
   }
 }
-
 
 @media only screen and (min-width: 1024px) {
   .navigation {
     background-color: #4056A1;
+    background-image: none;
+    position: fixed;
   }
 }

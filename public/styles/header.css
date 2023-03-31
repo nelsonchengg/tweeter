@@ -3,9 +3,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 120px;
-  height: 520px;
-  width: 100%;
-  background-color:gold;
+  background-color: gold;
   background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+}
+
+@media only screen and (min-width: 320px) {
+  .header {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    width: 30%;
+    height: 100%;
+    padding-top: 140px;
+    position: fixed;
+    z-index: 0;
+  }
 }
